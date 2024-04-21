@@ -59,6 +59,10 @@ console.log('Testing - isPositive', isPositive(-3))
 let array = ['Strawberry', 'Blueberry', 'Peach', 'Apple', 'Watermelon'];
 let last = array[array.length -1];
 function getLast(array) {
+  if (array === undefined || array.length == 0){
+    console.log ('Array is empty, there can be no last value')
+  }
+  else 
   console.log( 'in getLast', array, last);
   return last;
 }
@@ -71,14 +75,15 @@ myArray = [1, 2, 3, 4, 5, 6, 7, 8];
 valueToFind = 
 console.log('My Array of Numbers: ', myArray)
 console.log('Length of Array: ', myArray.length)
-function find(valueToFind) {
+function find(value) {
+  valueToFind = value
   for ( let i=0; i<myArray.length; i++) {
-    if(myArray[i] === 'undefined') {
-      console.log('Value does not exist', valueToFind)
+    if(value > myArray.length || value < 1) {
+      console.log('Value does not exist', value)
       return false;
      }
     else console.log('Current Value: ', myArray[i])
-    if(myArray[i] === valueToFind){
+    if(myArray[i] === value){
       console.log('The value was found!')
       return true;
         
@@ -87,9 +92,10 @@ function find(valueToFind) {
     
   }
 }
+console.log('Testing find', find(0));
 console.log('Testing find', find(5));
 console.log('Testing find', find(8));
-
+console.log('Testing find', find(12));
 // ----------------------
 // Stretch Goals
 // ----------------------
