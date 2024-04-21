@@ -75,7 +75,7 @@ function find (value, myArray) {
   console.log('in find');
   let i = 0
   while (i < myArray.length) {
-    console.log("in while loop, " + value + " [" + myArray + ']');
+    console.log("in while loop, my Value:" + value + " My Array: [" + myArray + ']');
       if (myArray[i] === value) {
         return true + " " + value + " exists in the Array ";
         console.log('exists in the array');
@@ -84,6 +84,7 @@ function find (value, myArray) {
   }
 return false + " " + value + " does not exist in the array";
 }
+console.log('Testing find:', find(3, [1,2,3,4,5]))
 console.log('Testing find:', find(-1, [5,-1,4,10])) ;
 console.log('Testing find:', find(5,[-10,4,6,2,3]));
 
@@ -92,10 +93,20 @@ console.log('Testing find:', find(5,[-10,4,6,2,3]));
 // ----------------------
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
+let string;
+let letter;
 function isFirstLetter(letter, string) {
-
+  console.log('in isFirstLetter');
+  if (string[0] === letter){
+  return true + " " + letter + " is the first letter of " + string;
 }
 
+  
+return false + " " + letter + " is not the first letter of " + string;
+}
+ 
+console.log('Testing isFirstLetter: ', isFirstLetter('e', 'electronic'));
+console.log('Testing isFirstLetter: ', isFirstLetter('f', 'effort'));
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
