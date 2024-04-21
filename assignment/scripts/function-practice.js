@@ -67,9 +67,28 @@ console.log( 'Testing - getLast: ', getLast(array))
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
-
+myArray = [1, 2, 3, 4, 5, 6, 7, 8];
+valueToFind = 
+console.log('My Array of Numbers: ', myArray)
+console.log('Length of Array: ', myArray.length)
+function find(valueToFind) {
+  for ( let i=0; i<myArray.length; i++) {
+    if(myArray[i] === 'undefined') {
+      console.log('Value does not exist', valueToFind)
+      return false;
+     }
+    else console.log('Current Value: ', myArray[i])
+    if(myArray[i] === valueToFind){
+      console.log('The value was found!')
+      return true;
+        
+    }
+   
+    
+  }
 }
+console.log('Testing find', find(5));
+console.log('Testing find', find(8));
 
 // ----------------------
 // Stretch Goals
