@@ -96,21 +96,20 @@ console.log('Testing find:', find(5,[-10,4,6,2,3]));
 let string;
 let letter;
 function isFirstLetter(letter, string) {
-  console.log('in isFirstLetter');
+  console.log('in isFirstLetter: is ', letter , ' the first letter of: ' , string);
   if (string[0] === letter){
-  return true + " " + letter + " is the first letter of " + string;
+  return true;
 }
 
   
-return false + " " + letter + " is not the first letter of " + string;
+return false;
 }
  
 console.log('Testing isFirstLetter: ', isFirstLetter('e', 'electronic'));
 console.log('Testing isFirstLetter: ', isFirstLetter('f', 'effort'));
 
 // 9. Function to return the sum of all numbers in an array
-let sum;
-let numberArray = [];
+let NumberArray = [];
 function sumAll(numArray) {
   numberArray = numArray
   sum = 0;
@@ -119,10 +118,10 @@ function sumAll(numArray) {
     sum += numArray[i]
   }
   // TODO: return the sum
-  console.log("[" +numberArray + "]" + " The sum of all numbers in the Array is: " + sum)
+  return sum
 
 }
-console.log('Testing sumAll: ', sumAll([1,6,3,7,2]) , sum, numberArray );
+console.log('Testing sumAll: ', sumAll([6,2,8,4,12]), " is the sum of the array" , numberArray);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
