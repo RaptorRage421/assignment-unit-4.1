@@ -71,31 +71,22 @@ console.log( 'Testing - getLast: ', getLast(array))
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-myArray = [1, 2, 3, 4, 5, 6, 7, 8];
-valueToFind = 
-console.log('My Array of Numbers: ', myArray)
-console.log('Length of Array: ', myArray.length)
-function find(value) {
-  valueToFind = value
-  for ( let i=0; i<myArray.length; i++) {
-    if(value > myArray.length || value < 1) {
-      console.log('Value does not exist', value)
-      return false;
-     }
-    else console.log('Current Value: ', myArray[i])
-    if(myArray[i] === value){
-      console.log('The value was found!')
-      return true;
-        
-    }
-   
-    
+function find (value, myArray) {
+  console.log('in find');
+  let i = 0
+  while (i < myArray.length) {
+    console.log("in while loop, " + value + " [" + myArray + ']');
+      if (myArray[i] === value) {
+        return true + " " + value + " exists in the Array ";
+        console.log('exists in the array');
+      }
+      i ++;
   }
+return false + " " + value + " does not exist in the array";
 }
-console.log('Testing find', find(0));
-console.log('Testing find', find(5));
-console.log('Testing find', find(8));
-console.log('Testing find', find(12));
+console.log('Testing find:', find(-1, [5,-1,4,10])) ;
+console.log('Testing find:', find(5,[-10,4,6,2,3]));
+
 // ----------------------
 // Stretch Goals
 // ----------------------
