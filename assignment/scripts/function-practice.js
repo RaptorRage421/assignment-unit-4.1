@@ -109,12 +109,20 @@ console.log('Testing isFirstLetter: ', isFirstLetter('e', 'electronic'));
 console.log('Testing isFirstLetter: ', isFirstLetter('f', 'effort'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll(array) {
-  let sum = 0;
+let sum;
+let numberArray = [];
+function sumAll(numArray) {
+  numberArray = numArray
+  sum = 0;
   // TODO: loop to add items
-
+  for (let i=0; i<numArray.length; i++){
+    sum += numArray[i]
+  }
   // TODO: return the sum
+  console.log("[" +numberArray + "]" + " The sum of all numbers in the Array is: " + sum)
+
 }
+console.log('Testing sumAll: ', sumAll([1,6,3,7,2]) , sum, numberArray );
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
