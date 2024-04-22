@@ -72,17 +72,18 @@ console.log( 'Testing - getLast: ', getLast(array))
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find (value, myArray) {
-  console.log('in find');
+  console.log('in find: ', myArray);
   let i = 0
   while (i < myArray.length) {
-    console.log("in while loop, my Value:" + value + " My Array: [" + myArray + ']');
+    console.log('in while loop, my Value:' , value , ' checking against myArray[i] value [' , myArray[i] , ']' );
       if (myArray[i] === value) {
-        return true + " " + value + " exists in the Array ";
+        return true;
         console.log('exists in the array');
       }
       i ++;
   }
-return false + " " + value + " does not exist in the array";
+
+return false;
 }
 console.log('Testing find:', find(3, [1,2,3,4,5]))
 console.log('Testing find:', find(-1, [5,-1,4,10])) ;
@@ -111,6 +112,7 @@ console.log('Testing isFirstLetter: ', isFirstLetter('f', 'effort'));
 // 9. Function to return the sum of all numbers in an array
 let NumberArray = [];
 function sumAll(numArray) {
+  numberArray = []
   numberArray = numArray
   sum = 0;
   // TODO: loop to add items
@@ -122,6 +124,7 @@ function sumAll(numArray) {
 
 }
 console.log('Testing sumAll: ', sumAll([6,2,8,4,12]), " is the sum of the array" , numberArray);
+console.log('Testing sumAll: ', sumAll([145,234,999,256,-451,70]), " is the sum of the array" , numberArray);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
