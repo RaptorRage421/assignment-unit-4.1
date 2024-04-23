@@ -133,10 +133,20 @@ console.log('Testing sumAll: ', sumAll([145,234,999,256,-451,70]), " is the sum 
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-function allPositive() {
-
+function allPositive(posArray) {
+  console.log('in allPositive: input array: ', posArray);
+  const positive = [];
+  for (let i=0; i < posArray.length; i++) {
+      if (posArray[i] > 0) {
+        positive.push(posArray[i]);
+      }
+  }
+  return positive;
 }
-  
+
+console.log('Testing allPositive - The positive numbers are', allPositive([1,-3,4,-13]));
+console.log('Testing allPositive: ', allPositive([123,5234,2346,73435,9924,-8234,-8234,-8234,234,-3495,-23,10]));
+
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
